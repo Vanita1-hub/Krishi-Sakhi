@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <rect width="640" height="420" fill="#d9f99d"/>
+  <rect y="220" width="640" height="200" fill="#93c5fd"/>
+  <circle cx="90" cy="80" r="34" fill="#fde68a"/>
+  <path d="M0 250c60-20 120-25 180 0s120 25 180 0 120-25 180 0 100 25 100 25v145H0z" fill="#60a5fa" opacity="0.7"/>
+  <path d="M90 220l18-95M145 220l18-95M200 220l18-95M255 220l18-95M310 220l18-95M365 220l18-95M420 220l18-95M475 220l18-95M530 220l18-95" stroke="#15803d" stroke-width="8" stroke-linecap="round"/>
+  <text x="26" y="392" font-family="Arial" font-size="28" fill="#0f172a">Demo evidence: flooded paddy field</text>
+</svg>

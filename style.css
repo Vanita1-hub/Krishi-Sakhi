@@ -1,0 +1,244 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.45;
+  color: #0f172a;
+  background: #f3f7f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #dcfce7, transparent 40%), #f3f7f6;
+}
+
+.container {
+  width: min(1024px, 100% - 2rem);
+  margin: 1.5rem auto 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero,
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #dbe4e2;
+  box-shadow: 0 10px 24px rgba(12, 74, 50, 0.08);
+  padding: 1.25rem;
+}
+
+.hero h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+}
+
+.subtext {
+  color: #334155;
+  margin: 0 0 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  margin: 0;
+  color: #16a34a;
+  font-weight: 700;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.grid-form {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  background: #fff;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 0.95rem;
+  background: #166534;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #1d4ed8;
+}
+
+.ghost-btn {
+  background: #e5f7ea;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.muted {
+  color: #64748b;
+}
+
+.status-line {
+  margin: 0.6rem 0;
+  font-size: 0.9rem;
+  color: #0f766e;
+}
+
+.status-chip {
+  font-size: 0.84rem;
+  color: #166534;
+  background: #dcfce7;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+}
+
+.error-text {
+  color: #b91c1c;
+  margin: 0.5rem 0;
+}
+
+.photo-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.photo-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.65rem;
+}
+
+.photo-card img {
+  width: 120px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.photo-card h4 {
+  margin: 0;
+}
+
+.photo-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.weather-summary {
+  margin-top: 0.4rem;
+}
+
+.weather-grid,
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.4rem 1rem;
+}
+
+.report {
+  margin-top: 0.8rem;
+}
+
+.report-sheet {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fcfffe;
+}
+
+.report-sheet h3,
+.report-sheet h4 {
+  margin-bottom: 0.45rem;
+}
+
+.report-sheet ul {
+  margin-top: 0.4rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 700px) {
+  .photo-card {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .hero,
+  .card > *:not(.report),
+  .card > .row-wrap {
+    display: none !important;
+  }
+
+  .card {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  .report-sheet {
+    border: none;
+    padding: 0;
+  }
+}
